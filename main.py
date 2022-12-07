@@ -3,6 +3,10 @@ from flask_jwt_extended import create_access_token, JWTManager, get_jwt_identity
 import sqlite3, uuid, hashlib, random
 from werkzeug.security import generate_password_hash, check_password_hash
 
+
+# ---------------------------------------------------------------------------------------
+# работа с базой
+
 connect = sqlite3.connect('slinks.db', check_same_thread=False)
 cursor = connect.cursor()
 
