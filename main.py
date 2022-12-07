@@ -126,12 +126,15 @@ def get_link_user():
     if user != None:
         if user[1] == link[1] and link[4] == 'private':
             if link != None:
-                return make_response(f"full link - \n {link[2]}")
+                # return make_response(f"full link - \n {link[2]}")
+                return red(shlink)
+
             else:
                 return make_response("there is no such link")
         else:
             if link != None:
-                return make_response(f"full link - \n {link[2]}")
+                # return make_response(f"full link - \n {link[2]}")
+                return red(shlink)
             else:
                 return make_response("there is no such link or it is not available to you")
     else:
@@ -143,7 +146,8 @@ def get_link():
     shlink = str(request.json.get("short_link", None))
     link = getLink(cursor, connect, shlink)
     if link != None and link[4] == 'public':
-        return make_response(f"full link - \n {link[2]}")
+        # return make_response(f"full link - \n {link[2]}")
+        return red(shlink)
     else:
         return make_response("there is no such link or it is not available to you")
 
