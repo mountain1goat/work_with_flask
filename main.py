@@ -206,5 +206,14 @@ def change_access_link():
     changeAccLinks(cursor, connect, shlink, access, login)
     return make_response('you have successfully change the link access!')
 
+# переход по ссылке
+@app.route("/<short>", methods=['GET'])
+def red(short):
+    # shlink = str(request.json.get("short_link", None))
+    link = getLink(cursor, connect, short)
+    print(link)
+    return redirect(link[2])
+
+
 # print('good')
 app.run()
