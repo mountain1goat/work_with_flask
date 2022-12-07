@@ -82,7 +82,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDM4NzU1NSwianRpIjoiZWY4OGNjMjAtYzgxMy00YWNhLWIyYTAtMjgyZTNkODFjM2M2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImphY29iIiwibmJmIjoxNjcwMzg3NTU1LCJleHAiOjE2NzAzODg0NTV9.oZ9KdpIMmgidVMXcnhpsmxEu8ZvlmD_y-9Dj-ekMCmU",
 									"type": "string"
 								}
 							]
@@ -91,7 +91,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"full_link\": \"https://youtube.com\"\r\n}",
+							"raw": "{\r\n    \"full_link\": \"https://github.com/mountain1goat/work_with_flask\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -340,6 +340,28 @@
 							"port": "5000",
 							"path": [
 								"getyourlinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "redirect",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								""
 							]
 						}
 					},
